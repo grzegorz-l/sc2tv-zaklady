@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Team1:</b>
+  <%= @duel.team1 %>
+</p>
+
+<p>
+  <b>Team2:</b>
+  <%= @duel.team2 %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @duel.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_duel_path(@duel) %> |
+<%= link_to 'Back', duels_path %>

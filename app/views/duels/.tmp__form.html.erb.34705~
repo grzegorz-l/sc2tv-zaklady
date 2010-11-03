@@ -1,0 +1,29 @@
+<%= form_for(@duel) do |f| %>
+  <% if @duel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@duel.errors.count, "error") %> prohibited this duel from being saved:</h2>
+
+      <ul>
+      <% @duel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team1 %><br />
+    <%= f.text_field :team1 %>
+  </div>
+  <div class="field">
+    <%= f.label :team2 %><br />
+    <%= f.text_field :team2 %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
