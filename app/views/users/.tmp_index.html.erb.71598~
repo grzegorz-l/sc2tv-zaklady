@@ -1,0 +1,4 @@
+<h3>Lista użytkowników</h3>
+<% @users.each do |user| %>
+  id <%= user.id %> email:<%= user.email %><br>
+<% end %>

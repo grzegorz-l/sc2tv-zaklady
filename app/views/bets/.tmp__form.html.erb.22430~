@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :winner, "Zwycięzca" %><br />
+    <%= f.label :winner %><br />
     
 	<%= f.select :winner, [[@duel.team1, @duel.team1], [@duel.team2, @duel.team2]], :required => true %>
   </div>
   <div class="field">
-    <%= f.label :gold , "Kasa"%><br />
+    <%= f.label :gold %><br />
     <%= f.text_field :gold %>
   </div>
   <div class="actions">
-    <%= f.submit "Utwórz" %>
+    <%= f.submit %>
   </div>
 <% end %>

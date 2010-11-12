@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :team1, "Drużyna 1" %><br />
+    <%= f.label :team1 %><br />
     <%= f.text_field :team1 %>
   </div>
   <div class="field">
-    <%= f.label :team2, "Drużyna 2" %><br />
+    <%= f.label :team2 %><br />
     <%= f.text_field :team2 %>
   </div>
   <div class="field">
-    <%= f.label :date, "Data" %><br />
+    <%= f.label :date %><br />
     <%= f.datetime_select :date %>
   </div>
   <div class="actions">
-    <%= f.submit "Utwórz" %>
+    <%= f.submit %>
   </div>
 <% end %>

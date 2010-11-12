@@ -2,9 +2,9 @@
 
 <table>
   <tr>
-    <th>Drużyna 1</th>
-    <th>Drużyna 2</th>
-    <th>Data</th>
+    <th>Team 1</th>
+    <th>Team 2</th>
+    <th>Date</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,9 +15,9 @@
     <td><%= duel.team1 %></td>
     <td><%= duel.team2 %></td>
     <td><%= duel.date %></td>
-    <td><%= link_to 'Pokaż', duel %></td>
-    <td><%= link_to 'Edytuj', edit_duel_path(duel) %></td>
-    <td><%= link_to 'Usuń', duel, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', duel %></td>
+    <td><%= link_to 'Edit', edit_duel_path(duel) %></td>
+    <td><%= link_to 'Destroy', duel, :confirm => 'Are you sure?', :method => :delete %></td>
 	<td><%= link_to 'Lista zakładów', duel_bets_path(duel) %></td>
 	
   </tr>
@@ -26,6 +26,6 @@
 
 <br />
 
-<%= link_to 'Nowy pojedynek', new_duel_path %>
+<%= link_to 'New Duel', new_duel_path %>
 
 

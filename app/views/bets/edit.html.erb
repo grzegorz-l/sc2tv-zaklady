@@ -1,6 +1,6 @@
-<h1>Editing bet</h1>
+<h1>Edycja zakładu</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @bet %> |
-<%= link_to 'Back', bets_path %>
+<%= link_to 'Show', duel_bet_path(@duel, @bet) %> |
+<%= link_to 'Back', duel_bets_path(@duel) %>

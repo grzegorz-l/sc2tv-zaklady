@@ -1,0 +1,30 @@
+<% if @duel %>
+<h1>Lista zakładów pojedynku: <%= @duel.team1%> vs <%= @duel.team2%></h1>
+<%end%>
+<table>
+  <tr>
+  	<th>Winner</th>
+    <th>Gold</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bets.each do |bet| %>
+  <tr>
+  	<td><%= bet.winner %></td>
+    <td><%= bet.gold %></td>
+	<% if @duel %>
+    <td><%= link_to 'Show', duel_bet_path(@duel, bet) %></td>
+    <td><%= link_to 'Edit', edit_duel_bet_path(@duel, bet) %></td>
+    <td><%= link_to 'Destroy', duel_bet_path(@duel, bet), :confirm => 'Are you sure?', :method => :delete %></td>
+    <%end%>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% if @duel %>
+<%= link_to 'New Bet', new_duel_bet_path %><br>
+<%= link_to 'Wróć', duels_path %>
+<%end%>
