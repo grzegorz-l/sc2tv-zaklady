@@ -1,6 +1,43 @@
 <h1>Editing duel</h1>
 
-<%= render 'form' %>
+<%= form_for(@duel) do |f| %>
+  <% if @duel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@duel.errors.count, "error") %> prohibited this duel from being saved:</h2>
+
+      <ul>
+      <% @duel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team1, "Drużyna 1" %><br />
+    <%= f.text_field :team1 %>
+  </div>
+  <div class="field">
+    <%= f.label :team2, "Drużyna 2" %><br />
+    <%= f.text_field :team2 %>
+  </div>
+  <div class="field">
+    <%= f.label :date, "Data" %><br />
+    <%= f.datetime_select :date %>
+  </div>
+   <div class="field">
+    <%= f.label :winner, "Zwycięzca" %><br>
+    <%= f.select :winner, [["Brak", ""],[@duel.team1, @duel.team1], [@duel.team2, @duel.team2]], :required => true %><br>
+  </div>
+  <div class="field">
+  <%= f.radio_button :finished, true %>Zakończono<br>
+  <%= f.radio_button :finished, false %>Nie zakończono<br>
+  </div>
+  <div class="actions">
+    <%= f.submit "Zastosuj" %>
+  </div>
+<% end %>
+
 
 <%= link_to 'Show', @duel %> |
 <%= link_to 'Back', duels_path %>

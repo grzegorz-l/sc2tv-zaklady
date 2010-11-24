@@ -2,6 +2,8 @@ class BetsController < ApplicationController
   # GET /bets
   # GET /bets.xml
   before_filter :authenticate_user!, :find_duel, :find_user
+  before_filter :check_date, :only => [:new, :edit]
+  
   
    def index
       if @user
@@ -22,7 +24,10 @@ class BetsController < ApplicationController
     @user = current_user
     @bet = @duel.bets.build(params[:bet])
     @bet.user_id = @user.id
-    if @bet.save
+
+    if @bet.save     
+      @user.gold -= @bet.gold
+      @user.save
       redirect_to duel_bets_path(@duel)
     else
       render :action => "new"
@@ -36,7 +41,6 @@ class BetsController < ApplicationController
   end
   
   def show
-    @duel = Duel.find(params[:duel_id])
     @bet = Bet.find(params[:id])
   end
   
@@ -48,8 +52,6 @@ class BetsController < ApplicationController
   end
   
   def destroy
-    
-    
     @bet = Bet.find(params[:id])
     @bet.destroy 
     if @duel
@@ -65,12 +67,18 @@ class BetsController < ApplicationController
   
 protected
   
+  def check_date
+    @duel = Duel.find(params[:duel_id])
+    if @duel.date < Time.now then
+      redirect_to duel_bets_path(@duel)
+    end
+  end
   def find_duel
     @duel = Duel.find(params[:duel_id]) if params[:duel_id]
   end
  
   def find_user
      @user = User.find(params[:user_id]) if params[:user_id]
-   end 
+ end
 
 end

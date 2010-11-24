@@ -7,6 +7,8 @@ gem 'rails', '3.0.1'
 
 gem 'devise', '1.1.3'
 
+gem 'win32console'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -27,4 +29,5 @@ gem 'devise', '1.1.3'
 # and rake tasks are available in development mode:
  group :development, :test do
    gem 'sqlite3-ruby', :require => 'sqlite3'
+   gem "rspec-rails", "~> 2.1.0"
  end

@@ -14,17 +14,17 @@
   <tr>
   	<td><%= bet.winner %></td>
     <td><%= bet.gold %></td>
-	<% if @duel %>
     <td><%= link_to 'Pokaż', duel_bet_path(@duel, bet) %></td>
     <td><%= link_to 'Edytuj', edit_duel_bet_path(@duel, bet) %></td>
     <td><%= link_to 'Usuń', duel_bet_path(@duel, bet), :confirm => 'Jesteś pewien?', :method => :delete %></td>
-    <%end%>
   </tr>
 <% end %>
 </table>
 
 <br />
+<%if @duel.date > Time.now%>
 <%= link_to 'Nowy zakład', new_duel_bet_path %><br>
+<%end%>
 <%= link_to 'Wróć', duels_path %>
 
 <%end%>
@@ -54,6 +54,6 @@
 </table>
 
 <br />
-<%= link_to 'Wróć', duels_path %>
+<%= link_to 'Wróć', user_path(current_user) %>
 
 <%end%>
