@@ -1,0 +1,7 @@
+<h3>Twoje konto</h3>
+
+E-mail: <%= @user.email %><br>
+Kasa: <%= @user.gold %>
+<br><br>
+<%= link_to "Lista zakładów", user_bets_path(current_user) %>  
+<br>  

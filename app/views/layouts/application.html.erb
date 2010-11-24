@@ -11,7 +11,7 @@
 <p><%= alert %></p>
 <div >  
   <% if user_signed_in? %>  
-    Zalogowany jako: <%= current_user.email %>  
+    Zalogowany jako: <%= current_user.email %>, <%= link_to "Moje konto", user_path(current_user) %>   
     <%= link_to "Wyloguj", destroy_user_session_path %>  
   <% else %>  
     <%= link_to "Zarejestruj", new_user_registration_path %> lub 
@@ -19,10 +19,8 @@
   <% end %>  
   <br>
   <%= link_to "Strona główna", duels_path %>  
-  <br>
-  <% if user_signed_in? %>  
-  <%= link_to "Moje zakłady", user_bets_path(current_user) %>  
-  <%end%>
+
+
 </div>  
 <%= yield %>
 

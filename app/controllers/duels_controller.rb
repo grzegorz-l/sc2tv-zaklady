@@ -57,7 +57,6 @@ class DuelsController < ApplicationController
   # PUT /duels/1.xml
   def update
     @duel = Duel.find(params[:id])
-
     respond_to do |format|
       if @duel.update_attributes(params[:duel])
         format.html { redirect_to(@duel, :notice => 'Duel was successfully updated.') }
@@ -68,6 +67,7 @@ class DuelsController < ApplicationController
       end
     end
   end
+
 
   # DELETE /duels/1
   # DELETE /duels/1.xml
