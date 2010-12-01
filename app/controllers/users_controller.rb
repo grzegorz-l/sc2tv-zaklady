@@ -1,9 +1,17 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_admin!, :except => :show
+  
   def index
     @users = User.all
   end
   
   def show
-    @user = current_user
+    @user = User.find(params[:id])
+  end
+  
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_path
   end
 end

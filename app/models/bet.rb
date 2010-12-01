@@ -1,11 +1,11 @@
 class Bet < ActiveRecord::Base
 belongs_to :duel
 belongs_to :user
-before_destroy :back_gold
+before_destroy :refund_gold
 validate :duel_start_date_cannot_be_in_the_past
 
 protected
- def back_gold
+ def refund_gold
    @duel = Duel.find_by_id(self.duel_id)
    if @duel.finished == false then
    @user = User.find_by_id(self.user_id)

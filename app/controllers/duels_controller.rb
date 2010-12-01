@@ -1,4 +1,5 @@
 class DuelsController < ApplicationController
+  before_filter :authenticate_admin!, :except => [:index, :show]
   # GET /duels
   # GET /duels.xml
   def index
@@ -44,7 +45,7 @@ class DuelsController < ApplicationController
 
     respond_to do |format|
       if @duel.save
-        format.html { redirect_to(@duel, :notice => 'Duel was successfully created.') }
+        format.html { redirect_to(:controller => :admin_panel, :action => :duels, :notice => 'Duel was successfully created.') }
         format.xml  { render :xml => @duel, :status => :created, :location => @duel }
       else
         format.html { render :action => "new" }
@@ -59,7 +60,7 @@ class DuelsController < ApplicationController
     @duel = Duel.find(params[:id])
     respond_to do |format|
       if @duel.update_attributes(params[:duel])
-        format.html { redirect_to(@duel, :notice => 'Duel was successfully updated.') }
+        format.html { redirect_to(:controller => :admin_panel, :action => :duels, :notice => 'Duel was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -76,7 +77,7 @@ class DuelsController < ApplicationController
     @duel.destroy
 
     respond_to do |format|
-      format.html { redirect_to(duels_url) }
+      format.html { redirect_to(:controller => :admin_panel, :action => :duels) }
       format.xml  { head :ok }
     end
   end

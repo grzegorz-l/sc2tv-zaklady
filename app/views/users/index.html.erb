@@ -1,4 +1,8 @@
 <h3>Lista użytkowników</h3>
 <% @users.each do |user| %>
-  id <%= user.id %> email:<%= user.email %><br>
+  id <%= user.id %><br> 
+  email: <%= user.email %><br>
+  <%= link_to 'Usuń użytkownika', user, :confirm => 'Jesteś pewien?', :method => :delete%>
+  <%= link_to 'Pokaż', user %>
+  <br><br>
 <% end %>

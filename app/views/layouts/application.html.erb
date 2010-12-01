@@ -18,6 +18,7 @@
     <%= link_to "Zaloguj", new_user_session_path %>  
   <% end %>  
   <br>
+  <%= link_to "Panel admina", admin_panel_index_path if admin_signed_in? %>  
   <%= link_to "Strona główna", duels_path %>  
 
 
