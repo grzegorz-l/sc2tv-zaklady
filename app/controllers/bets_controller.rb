@@ -2,7 +2,11 @@ class BetsController < ApplicationController
   # GET /bets
   # GET /bets.xml
   before_filter :authenticate_user!, :find_duel, :find_user
+<<<<<<< HEAD
   before_filter :check_date, :except => [:index, :show]
+=======
+  before_filter :check_date, :only => [:new, :edit]
+>>>>>>> f1ed896c65919abd0878f6063e33466881653861
   
   
    def index
