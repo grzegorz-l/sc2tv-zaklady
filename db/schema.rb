@@ -10,8 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20101127181929) do
+ActiveRecord::Schema.define(:version => 20110119210450) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -27,13 +26,11 @@ ActiveRecord::Schema.define(:version => 20101127181929) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username"
   end
 
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
-=======
-ActiveRecord::Schema.define(:version => 20101119180930) do
->>>>>>> f1ed896c65919abd0878f6063e33466881653861
 
   create_table "bets", :force => true do |t|
     t.string   "winner"
@@ -41,6 +38,15 @@ ActiveRecord::Schema.define(:version => 20101119180930) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "duel_id"
+    t.integer  "user_id"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "author"
+    t.integer  "post_id"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "user_id"
   end
 
@@ -52,6 +58,27 @@ ActiveRecord::Schema.define(:version => 20101119180930) do
     t.datetime "updated_at"
     t.string   "winner",     :default => ""
     t.boolean  "finished",   :default => false
+    t.string   "status",     :default => "Nierozpoczety"
+    t.string   "event"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "short_desc"
+  end
+
+  create_table "suggestions", :force => true do |t|
+    t.text     "description"
+    t.datetime "date"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "team1"
+    t.string   "team2"
   end
 
   create_table "users", :force => true do |t|
@@ -69,6 +96,7 @@ ActiveRecord::Schema.define(:version => 20101119180930) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "gold",                                :default => 100
+    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

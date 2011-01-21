@@ -1,0 +1,29 @@
+<h1>Propozycje pojedynków</h1>
+
+<table>
+  <tr>
+    <th>Drużyna 1</th>
+    <th>Drużyna 2</th>
+    <th>Data pojedynku</th>
+    <th>Link</th>
+    <th>Użytkownik</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @suggestions.each do |suggestion| %>
+  <tr>
+    <td><%= suggestion.team1 %></td>
+    <td><%= suggestion.team2 %></td>
+    <td><%= suggestion.date %></td>
+    <td><%= suggestion.link %></td>
+    <td><%= User.find_by_id(suggestion.user_id).username %></td>
+    <td><%= link_to 'Pokaż', suggestion %></td>
+    <td><%= link_to 'Edytuj', edit_suggestion_path(suggestion) %></td>
+    <td><%= link_to 'Usuń', suggestion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

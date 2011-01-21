@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Drużyna 1:</b>
+  <%= @suggestion.team1 %>
+</p>
+
+<p>
+  <b>Drużyna 2:</b>
+  <%= @suggestion.team2 %>
+</p>
+
+<p>
+  <b>Dodatkowe info:</b>
+  <%= @suggestion.description %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @suggestion.date %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @suggestion.link %>
+</p>
+
+
+<%= link_to 'Edytuj', edit_suggestion_path(@suggestion) %> |
+<%= link_to 'Wróć', suggestions_path %>

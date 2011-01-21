@@ -1,5 +1,7 @@
+<div id="middle_cont">
 <h1>Nowy zakład</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Wróć', duel_bets_path %>
+<%= link_to 'Wróć', :controller => :home, :action => :show_duel, :id => @duel%>
+</div>

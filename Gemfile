@@ -7,7 +7,9 @@ gem 'rails', '3.0.1'
 
 gem 'devise', '1.1.3'
 
-gem 'win32console'
+gem 'tiny_mce'
+
+gem 'will_paginate', '~> 2.3.15'
 
 # Use unicorn as the web server
 # gem 'unicorn'

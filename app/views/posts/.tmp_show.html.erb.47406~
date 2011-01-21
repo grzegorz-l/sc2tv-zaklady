@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tytuł:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Opis:</b>
+  <%= raw(@post.description) %>
+</p>
+
+
+<%= link_to 'Edytuj', edit_post_path(@post) %> |
+<%= link_to 'Wróć', posts_path %>

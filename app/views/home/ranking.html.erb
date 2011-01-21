@@ -1,0 +1,17 @@
+<div id="site_title">Ranking graczy</div>
+<div id="middle_cont">
+	<table cellpadding="2" cellspacing="0" border="1" align="center">
+		<tr>
+			<th>Miejsce</th>
+			<th>Użytkownik</th>
+			<th>Kasa</th>
+		</tr>
+		<%for i in 1..@users.count%>
+		<tr class="<%= cycle('ranking-line-odd', 'ranking-line-even') %>">
+			<td><%=i%></td>
+			<td><%=@users[i-1].username%></td>
+			<td><%=@users[i-1].gold%></td>
+		</tr>
+		<%end%>
+	</table>
+</div>

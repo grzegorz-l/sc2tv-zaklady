@@ -1,11 +1,17 @@
 <h1>Lista pojedynków</h1>
 
-<table>
+<p id="notice"><%= notice %></p>
+
+<table cellspacing="5">
   <tr>
     <th>Drużyna 1</th>
     <th>Drużyna 2</th>
     <th>Data</th>
-    <th></th>
+    <th>Zakończony</th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
 	<th></th>
   </tr>
 
@@ -14,10 +20,16 @@
     <td><%= duel.team1 %></td>
     <td><%= duel.team2 %></td>
     <td><%= duel.date %></td>
+	<td><%if duel.finished%>Tak<%else%>Nie<%end%></td>
     <td><%= link_to 'Pokaż', duel %></td>
+	<td><%= link_to 'Edytuj', edit_duel_path(duel) %></td>
+	<td><%= link_to 'Usuń', duel, :confirm => 'Jesteś pewien?', :method => :delete %></td>
 	<td><%= link_to 'Lista zakładów', duel_bets_path(duel) %></td>
+	<td><%= link_to 'Zakończ pojedynek', :action => :result, :id => duel  %></td>
   </tr>
 <% end %>
 </table>
+
+<%= link_to 'Nowy pojedynek', new_duel_path%>
 
 

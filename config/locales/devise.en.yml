@@ -4,6 +4,12 @@ en:
       not_found: "not found"
       already_confirmed: "was already confirmed"
       not_locked: "was not locked"
+      
+      
+  activemodel:
+    attributes:
+      user:
+        login: "Username or email"
 
   devise:
     failure:

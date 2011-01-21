@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_admin!, :except => :show
+  layout "admin_panel"
   
   def index
     @users = User.all
@@ -15,4 +16,6 @@ class UsersController < ApplicationController
     redirect_to users_path
     @user = current_user
   end
+
+
 end

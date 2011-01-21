@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sc2tvZaklady</title>
+  <%= stylesheet_link_tag  'scaffold', 'admin_panel' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+  <%= include_tiny_mce_if_needed %>
+</head>
+<body>
+<div id="admin_top">
+	<p id="top_title">Panel administracyjny</p>
+</div>
+<div id="top_menu">
+	<%=link_to 'Newsy', posts_path %>
+	<%=link_to 'Pojedynki', duels_path %>
+	<%=link_to 'Użytkownicy', users_path %>
+    <%=link_to 'Propozycje pojedynków', suggestions_path %>
+</div>
+<div id="container">
+	<%= yield%>
+</div>
+<div id="admin_footer"></div>
+</body>
+</html>
+

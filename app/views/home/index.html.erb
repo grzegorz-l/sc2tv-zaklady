@@ -1,0 +1,17 @@
+<div id="middle_cont">
+<div id="site_title">Newsy</div>
+<% @posts.each do |post| %>
+<div class="news">
+	<div class="news_title">
+		<%= post.title %>
+	</div>
+	<div class="news_desc">
+		<%= raw(post.short_desc) %>
+        <%= link_to "Czytaj więcej... (#{post.comments.count})", :controller => :home, :action => :show_news, :id => post %>
+        <div class="news_added_time"> Dodano: <%=post.created_at%> </div>
+    </div>
+	<hr>
+</div>
+<%end%>
+<%= will_paginate @posts%> 
+</div>

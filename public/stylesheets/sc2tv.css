@@ -1,0 +1,237 @@
+html {
+	height : 100%;
+}
+
+
+h1 {
+        font:  180% sans-serif;
+        color: #565861;
+}
+
+h3 {
+	color: #483fba;
+}
+
+.post {
+	color: #d3d0d5;
+}
+body {
+	
+	line-height : 125%;
+	font-family : "Times New Roman", Arial, Helvetica, Sans-Serif ;
+	font-size : 12px;
+	font-weight : normal;
+	letter-spacing : normal;
+	padding : 0;
+	color : #dcdcdc;
+	background-color : #000;
+	background-image:url('/images/bg.jpg');
+	background-repeat : repeat-y;
+	background-position:center top;
+	margin: 0;
+}
+body.contentpane {
+	color : #fff;
+	background : none;
+	background-color : #fff;
+}
+
+
+#header1 {
+	height : 300px;
+	width : 100%;
+	padding : 0;
+	background-color:  transparent;
+	margin: auto;
+    text-align:center;
+   	background-image : url('/images/header.jpg');
+   	background-repeat:no-repeat;
+   	background-position: center top;
+
+}
+
+#main_table{
+	margin: auto;
+	width: 990px; 
+	border: 0px;
+}
+
+#container {
+	width: 990px;
+	margin: auto;
+	float: none;
+	background-color: transparent;
+	background-image: url('/images/bg2.gif');
+	background-repeat: repeat;
+
+}
+
+.side{
+	width: 160px;
+	float: left;
+	padding-top: 15px;
+	overflow: hidden;
+}
+
+#middle{
+	width: 670px;
+	float: left;
+	overflow: hidden;
+}
+
+#site_title{
+	height : 38px;
+	margin-top : 15px;
+	text-align : center;
+	font-size : 23px;
+	color : #4f4f4f;
+}
+
+#site_desc{
+    padding-bottom:20px;
+    text-align:justify;
+}
+
+#middle_cont{
+	width: 610px;
+	margin: auto;
+}
+
+.news{
+	text-justify: newspaper;
+	padding-bottom: 20px; 
+}
+
+#show_news{
+	width: 610px;
+	margin: auto;
+	text-justify: newspaper;
+	margin-top: 25px;
+}
+
+.news_title{
+	font-size: 21px;
+    font-family: fantasy ,Arial;
+	color: #f67326;
+}
+
+.news_added_time{
+    font-size: 12px;
+    color: #f67326;
+    text-align: right;
+}
+.news_desc{
+}
+
+
+#footer {
+	height : 25px;
+	width : 100%;
+	background-color: transparent;
+   	background-image : url('/images/blizz.gif');
+	background-repeat : repeat;
+	font-size : 12px;
+	text-align : center;
+	color: #3d3a3a;
+	clear: both;
+	
+}
+
+#top_menu{
+	height : 25px;
+	width : 100%;
+	float :inherit;
+	padding-top : 7px;
+	background-color: transparent;
+   	background-image : url('/images/top_nav.gif');
+	background-repeat : repeat;
+	font-size : 14px;
+	font-family : Arial, Helvetica, Sans-Serif;
+	text-align : center;
+	color: #3d3a3a;
+	
+}
+
+.modul_title{
+	height : 35px;
+	width : 145px;
+	padding-top : 10px;
+	padding-left : 3px;
+	margin-left : 5px;
+	background-color: transparent;
+   	background-image : url('/images/top_nav2.gif');
+	background-repeat : repeat-x;
+	font-size : 14px;
+	color: white;
+}
+
+.modul_container{
+	width : 145px;
+	padding-left : 3px;
+	margin-left : 5px;
+	margin-bottom : 10px;
+	font-size : 11px;
+	color: white;
+}
+
+#notify{
+    color: #42bc06;
+    font-size: 14px;
+    text-align: center;
+}
+
+.ranking-line-even {
+    background:   #9692dc;
+    color: black;
+}
+
+.ranking-line-odd {
+    background:   #454fbe;
+
+}
+
+.duel-line {
+    background:   #ecc47f;
+    color: black;
+}
+
+.title-duel-line {
+    background:   #fda220;
+    color: black;
+}
+
+#comments_title{
+	font-size: 16px;
+	color: #f67326;
+}
+
+.comment_body{
+	width: 450px;
+	float: left;
+	
+}
+
+.comment_date{
+	width: 160px;
+	float: left;
+	text-align: right;
+	color: #f67326;
+	
+}
+
+.comment{
+	width: 610px;
+}
+
+hr.comment_under_line{
+	width: 610px;
+	float: left;
+}
+
+#comment_form{
+	width: 610px;
+	float: left;
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+

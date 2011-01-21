@@ -1,0 +1,24 @@
+<%if user_signed_in?%>
+	<div class="modul_title">Zalogowany</div>
+	<div class="modul_container">
+		Witaj! <%= current_user.username%> <br>
+		<%= link_to 'Twoje konto', :controller => :home, :action => :user_acc %><br>
+		<%= link_to 'Wyloguj', destroy_user_session_path(current_user)%>
+	</div>
+<%else%>
+	<div class="modul_title">Logowanie</div>
+	<div class="modul_container">
+		<%= form_for("user", :url => user_session_path) do |f| %>
+  			<p><%= f.label :username %><br />
+  			<%= f.text_field :username, :size =>18 %></p>
+
+  			<p><%= f.label :password, "Hasło" %><br />
+  			<%= f.password_field :password, :size =>18 %></p>
+			
+  			<p><%= f.submit "Zaloguj" %></p>
+			
+			<p>Nie masz konta ?<br>
+			<%= link_to 'Zarejestruj się!', new_user_registration_path %></p>
+		<% end %>
+	</div>
+<%end%>

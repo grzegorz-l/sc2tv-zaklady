@@ -1,0 +1,37 @@
+<%= form_for(@suggestion) do |f| %>
+  <% if @suggestion.errors.any? %>
+    <div id="error_explanation">
+      <h2>Poniższy/e błąd/błędy nie pozwoliły na wysłanie sugesti:</h2>
+
+      <ul>
+      <% @suggestion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team1, "Drużyna 1" %><br />
+    <%= f.text_field :team1 %>
+  </div>
+  <div class="field">
+    <%= f.label :team2, "Drużyna 2" %><br />
+    <%= f.text_field :team2 %>
+  </div>
+  <div class="field">
+    <%= f.label :description, "Dodatkowe informacje" %><br />
+    <%= f.text_area :description, :cols => 40, :rows => 10%>
+  </div>
+  <div class="field">
+    <%= f.label :date, "Data" %><br />
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :link, "Link" %><br />
+    <%= f.text_field :link %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Potwierdź" %>
+  </div>
+<% end %>

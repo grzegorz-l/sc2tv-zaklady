@@ -1,0 +1,13 @@
+<div id="site_title">Pojedynek: <%=@duel.team1%> vs <%=@duel.team2%></div>
+<div id="middle_cont">
+	<p>Kiedy start: <%=@duel.date%></p>
+	<p>Wydarzenie: <%=@duel.event%></p>
+	<p>Status: 
+	<%if @duel.finished%>Zakończony<%elsif @duel.date < @time%>Rozpoczęty<%else%>Nierozpoczęty<%end%></p>
+	<p>Ilość zakładów: <%=@duel.bets.count%></p>
+	<% if @duel.finished%><p>Zwycięzca: <%=@duel.winner%></p><%end%>
+	<%if @duel.date > Time.now%>
+		<%= link_to 'Postaw zakład', new_duel_bet_path(@duel)%><br>
+	<%end%>
+	<%= link_to 'Wróć', :action => :duels %>
+</div>

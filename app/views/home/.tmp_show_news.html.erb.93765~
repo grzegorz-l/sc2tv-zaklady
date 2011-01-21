@@ -1,0 +1,46 @@
+<br>
+<div class="news">
+	<div class="news_title">
+		<%= @post.title %>
+	</div>
+	<div class="news_desc">
+		<%= raw(@post.description) %>
+	</div>
+	<hr>
+	<p id="comments_title">Komentarze:</p>
+	<table cellspacing="0", cellpadding="0">
+		<% @comments.each do |comment| %>
+		<%if !comment.id.blank?%>
+			<tr>
+				<td class="comment_body">
+					<%= comment.content %>
+					<%if admin_signed_in?%>
+						<%= link_to 'Usuń', :controller => :comments, :action => :destroy, :id => @post, :comment_id => comment  %>
+					<%end%>
+				</td>
+				<td class="comment_date">
+					<%= comment.created_at %>
+				</td>
+			</tr>
+			<tr><td><hr size="1", color ="#f67326"></td></tr>
+		
+			
+		<%end%>
+		<%end%>
+	</table>
+
+	
+	<br>
+	<%= form_for([@post, @comment]) do |f| %>
+  		<div class="field">
+    		<%= f.label :content, "Tekst" %><br />
+			<%= f.text_area :content, :cols => 70, :rows => 4%>
+  		</div>
+
+  		<div class="actions">
+    		<%= f.submit "Dodaj komentarz" %>
+  		</div>
+	<% end %>
+	
+	<%=link_to 'Wróć', :action => :index%>
+</div>

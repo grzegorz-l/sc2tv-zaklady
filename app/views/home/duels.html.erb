@@ -1,0 +1,22 @@
+<div id="site_title">Nadchodzące pojedynki</div>
+<div id="middle_cont">
+<table cellpadding="2" cellspacing="0" border="2" align="center">
+	<tr class="title-duel-line">
+		<th>Drużyna 1</th>
+		<th>Drużyna 2</th>
+	    <th>Status</th>
+        <th>Data</th>
+		<th></th>
+	</tr>
+	<% @duels.each do |duel|%>
+	<tr class="<% if duel.date > Time.now%>duel-line<%else%>duel-line<%end%>">
+		<td><%= duel.team1%></td>
+		<td><%= duel.team2%></td>
+	    <td><%if duel.date < Time.now %>Rozpoczęty<%else%>Nierozpoczęty<%end%></td>
+        <td><%= duel.date%></td>
+		<td><%= link_to 'Szczegóły' , :controller => :home, :action => :show_duel, :id => duel %></td>
+	</tr>
+	<%end%>
+</table><br><br>
+<%= will_paginate @duels%>
+</div>

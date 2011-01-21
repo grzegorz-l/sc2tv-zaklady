@@ -1,6 +1,6 @@
 class Duel < ActiveRecord::Base
   has_many :bets, :dependent => :destroy
-  after_update :finish_bet
+ 
   
   protected
   def finish_bet

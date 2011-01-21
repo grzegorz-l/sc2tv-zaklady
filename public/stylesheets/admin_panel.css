@@ -1,0 +1,37 @@
+html {
+	background-color: black;
+}
+
+a { color: black; }
+a:visited { color: black; }
+a:hover { color: black; background-color: white; }
+
+#admin_top{
+	height: 100px;
+	width: 100%;
+	background-color: #0080ff;	
+}
+
+#top_title{
+	margin-top: 0px;
+	font-size: 25px;
+	color: black;
+	padding-left: 10px;
+	padding-top: 35px;
+}
+
+#top_menu{
+	background-color: #8080ff;
+	padding-left: 10px;	
+}
+
+#container{
+	margin-left: 10px;
+}
+
+#admin_footer{
+	height: 30px;
+	width: 100%;
+	background-color: #0080ff;
+	margin-top: 15px;
+}

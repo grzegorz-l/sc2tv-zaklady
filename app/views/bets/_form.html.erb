@@ -1,7 +1,7 @@
 <%= form_for([@duel, @bet]) do |f| %>
   <% if @bet.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@bet.errors.count, "error") %> prohibited this bet from being saved:</h2>
+      <h2>Poniższy/e błąd/błędy nie pozwoliły na postawienie zakładu:</h2>
 
       <ul>
       <% @bet.errors.full_messages.each do |msg| %>
@@ -13,13 +13,13 @@
 
   <div class="field">
     <%= f.label :winner, "Zwycięzca" %><br />
-    
 	<%= f.select :winner, [[@duel.team1, @duel.team1], [@duel.team2, @duel.team2]], :required => true %>
   </div>
   <div class="field">
     <%= f.label :gold , "Kasa"%><br />
     <%= f.text_field :gold %>
   </div>
+  <%= hidden_field(:bet, :user_id, :value => @user.id) %>
   <div class="actions">
     <%= f.submit "Utwórz" %>
   </div>

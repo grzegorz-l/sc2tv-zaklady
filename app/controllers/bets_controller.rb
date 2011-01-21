@@ -1,37 +1,39 @@
 class BetsController < ApplicationController
   # GET /bets
   # GET /bets.xml
-  before_filter :authenticate_user!, :find_duel, :find_user
+  before_filter :find_duel, :find_user
+  
+  before_filter :auth_admin_user, :except => :new
+  
+  before_filter :authenticate_user!, :only => :new
   
   before_filter :check_date, :except => [:index, :show]
 
   before_filter :check_date, :only => [:new, :edit]
-  
   
    def index
       if @user
         @bets = @user.bets
       else
         @bets = @duel.bets
+        render :action => "index", :layout => "admin_panel"
       end
    end
   
   def new
-   
     @user = current_user
     @bet = @duel.bets.build
   end
   
   def create
-  
     @user = current_user
     @bet = @duel.bets.build(params[:bet])
-    @bet.user_id = @user.id
 
     if @bet.save     
       @user.gold -= @bet.gold
       @user.save
-      redirect_to duel_bets_path(@duel)
+      #redirect_to(home_index_path, :notice => 'Nowy zaklad potwierdzony')
+      redirect_to({:controller => :home, :action => :show_duel, :id => @duel},  :notice => 'Nowy zaklad potwierdzony')
     else
       render :action => "new"
     end
@@ -46,8 +48,7 @@ class BetsController < ApplicationController
     @bet = Bet.find(params[:id])
   end
   
-   def update
-   
+  def update
     @bet = Bet.find(params[:id])
     @bet.update_attributes(params[:bet])
     redirect_to duel_bets_path(@duel)
@@ -66,6 +67,11 @@ class BetsController < ApplicationController
   
 protected
   
+  def auth_admin_user
+    if !(:authenticate_user! || :authenticate_admin!)
+      redirect_to new_user_session_path
+    end
+  end
   def check_date
     @duel = Duel.find(params[:duel_id])
     if @duel.date < Time.now then

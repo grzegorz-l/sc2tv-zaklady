@@ -20,10 +20,14 @@
     <%= f.text_field :team2 %>
   </div>
   <div class="field">
+    <%= f.label :event, "Wydarzenie" %><br />
+    <%= f.text_field :event %>
+  </div>
+  <div class="field">
     <%= f.label :date, "Data" %><br />
     <%= f.datetime_select :date %>
   </div>
   <div class="actions">
-    <%= f.submit "Utwórz" %>
+    <%= f.submit "Zapisz" %>
   </div>
 <% end %>

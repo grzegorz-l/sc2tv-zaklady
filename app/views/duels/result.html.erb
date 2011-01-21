@@ -1,0 +1,31 @@
+<h1>Wynik pojedynku</h1>
+
+<%= form_for(@duel) do |f| %>
+  <% if @duel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@duel.errors.count, "error") %> prohibited this duel from being saved:</h2>
+
+      <ul>
+      <% @duel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p><%=@duel.team1%> vs <%=@duel.team2%></p>
+  <p>Data: <%=@duel.date%></p>
+   <div class="field">
+    <%= f.label :winner, "Zwycięzca" %><br>
+    <%= f.select :winner, [["Brak", ""],[@duel.team1, @duel.team1], [@duel.team2, @duel.team2]], :required => true %><br>
+  </div>
+  <div class="field">
+  <%= f.radio_button :finished, true %>Zakończono<br>
+  <%= f.radio_button :finished, false %>Nie zakończono<br>
+  </div>
+  <div class="actions">
+    <%= f.submit "Zakończ pojedynek", :action => :make_duel_result%>
+  </div>
+<% end %>
+
+<%= link_to 'Wróć', duels_path %>

@@ -5,6 +5,7 @@
   <tr>
   	<th>Zwycięzca</th>
     <th>Kasa</th>
+	<th>Użytkownik</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,6 +15,7 @@
   <tr>
   	<td><%= bet.winner %></td>
     <td><%= bet.gold %></td>
+	<td><%= bet.user.email %></td>
     <td><%= link_to 'Pokaż', duel_bet_path(@duel, bet) %></td>
     <td><%= link_to 'Edytuj', edit_duel_bet_path(@duel, bet) %></td>
     <td><%= link_to 'Usuń', duel_bet_path(@duel, bet), :confirm => 'Jesteś pewien?', :method => :delete %></td>
@@ -31,15 +33,15 @@
 
 
 <% if @user %>
-<h1>Lista twoich zakładów</h1>
+<div id="middle_cont">
+<h2>Lista twoich zakładów</h2>
 
-<table>
+<table border="2" cellpadding="2" cellspacing="0">
   <tr>
   	<th>Pojedynek</th> 
-  	<th>Zwycięzca</th> 
+  	<th>Twój typ</th> 
+	<th>Kiedy</th> 
     <th>Kasa</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
@@ -47,6 +49,7 @@
   <tr>
   	<td><%= bet.duel.team1%> vs <%= bet.duel.team2%></td>
   	<td><%= bet.winner %></td>
+	<td><%= bet.duel.date %></td>
     <td><%= bet.gold %></td>
     <td><%= link_to 'Usuń', user_bet_path(@user, bet), :confirm => 'Jesteś pewien?', :method => :delete %></td>
   </tr>
@@ -54,6 +57,7 @@
 </table>
 
 <br />
-<%= link_to 'Wróć', user_path(current_user) %>
+<%= link_to 'Wróć', :controller => :home, :action => :user_acc %>
 
 <%end%>
+</div>

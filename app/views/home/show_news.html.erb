@@ -1,0 +1,50 @@
+<div id="show_news">
+	<span class="news_title">
+		<%= @post.title %>
+	</span>
+	<span class="news_desc">
+		<%= raw(@post.description) %>
+	</span>
+	<hr>
+	<p id="comments_title">Komentarze:</p>
+		<% @comments.each do |comment| %>
+		<%if !comment.id.blank?%>
+			<div class="comment">
+				<span class="comment_body">
+					<%= comment.content %>
+					<%if ((@user && (@user.id == comment.user_id))) || admin_signed_in? %>
+						<%= link_to 'Usuń', :controller => :comments, :action => :destroy, :id => @post, :comment_id => comment  %>
+					<%end%>
+				</span>
+				<span class="comment_date">
+					<%= comment.user.username%><br>
+					<%= comment.created_at %>
+				</span>
+				<hr class="comment_under_line" color="#f67326" size="1">
+			</div>
+		<%elsif @comments.count == 0%>
+			<span class="comment">
+				Brak komentarzy.
+			</span>
+		<%end%>
+		<%end%>
+  <%= will_paginate @comments%>
+		
+	<div id="comment_form">
+	<%if @user%>
+	<%= form_for([@post, @comment]) do |f| %>
+  		<div class="field">
+    		<%= f.label :content, "Tekst" %><br />
+			<%= f.text_area :content, :cols => 70, :rows => 4%>
+  		</div>
+		<%= f.hidden_field(:user_id, :value => @user.id) %>
+  		<div class="actions">
+    		<%= f.submit "Dodaj komentarz" %>
+  		</div>
+	<%end%>
+	<%=link_to 'Wróć', :action => :index%>
+	<%else%>
+	<%= link_to "Zaloguj się aby dodać komentarz.", new_user_session_path%>
+	<%end%>
+	</div>
+</div>

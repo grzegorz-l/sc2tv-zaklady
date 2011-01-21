@@ -1,0 +1,29 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title, "Tytuł" %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :short_desc, "Krótki opis" %><br />
+    <%= f.text_area :short_desc, :class => "mceEditor" %>
+  </div>
+  <div class="field">
+    <%= f.label :description, "Pełen opis" %><br />
+    <%= f.text_area :description, :class => "mceEditor" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Zapisz" %>
+  </div>
+<% end %>

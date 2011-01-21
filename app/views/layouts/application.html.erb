@@ -2,28 +2,60 @@
 <html>
 <head>
   <title>Sc2tvZaklady</title>
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'scaffold', 'sc2tv' %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-<p><%= notice %></p>
-<p><%= alert %></p>
-<div >  
-  <% if user_signed_in? %>  
-    Zalogowany jako: <%= current_user.email %>, <%= link_to "Moje konto", user_path(current_user) %>   
-    <%= link_to "Wyloguj", destroy_user_session_path %>  
-  <% else %>  
-    <%= link_to "Zarejestruj", new_user_registration_path %> lub 
-    <%= link_to "Zaloguj", new_user_session_path %>  
-  <% end %>  
-  <br>
-  <%= link_to "Panel admina", admin_panel_index_path if admin_signed_in? %>  
-  <%= link_to "Strona główna", duels_path %>  
+<div id="header1"></div>
+<table id="main_table" cellpadding="0" cellspacing="0" >
+	<tr>
+	<td id="container">
+		
+	<div id="top_menu">
+		<%= link_to 'Strona główna', home_index_path %> | 
+		<%= link_to 'Lista pojedynków',:controller => :home, :action => :duels %> |
+		<%= link_to 'Archiwum pojedynków',:controller => :home, :action => :arch_duels %> |
+		<%= link_to 'Ranking graczy',:controller => :home, :action => :ranking %> |
+		<%= link_to 'Zaproponuj pojedynek', new_suggestion_path %>
+        <%if !user_signed_in? %>
+			| <%= link_to 'Logowanie', new_user_session_path %> | 
+			<%= link_to 'Rejestracja', new_user_registration_path %>
+		<%end%>
+	</div>
+	<div class="side">
+		<img src="/images/left_top.jpg"></img>
+		
+		<div class="modul_title">Facebook</div>
+		<div class="modul_container">
+			Znajdz nas na facebook'u
+		</div>
+		
+		<img src="/images/left_bottom.jpg"></img>
+	</div>
+
+	<div id="middle">
+    <p id="notify"><%= notice %></p>
+
+		<%=yield %>
+	</div>
+
+	<div class="side">
+		<img src="/images/right_top.jpg"></img>
+		<%= render :partial => "home/partials/user_acc" %>
+		<img src="/images/right_bottom.jpg"></img>
+	</div>
+	</td>
+	</tr>
+	
+</table>
 
 
-</div>  
-<%= yield %>
 
+<div id="footer">
+	Zakłady SC2tv.pl 2010. All rights reserved 
+</div>
 </body>
+
+
 </html>
