@@ -1,6 +1,5 @@
 class BetsController < ApplicationController
-  # GET /bets
-  # GET /bets.xml
+
   before_filter :find_duel, :find_user
   
   before_filter :auth_admin_user, :except => :new
@@ -32,7 +31,6 @@ class BetsController < ApplicationController
     if @bet.save     
       @user.gold -= @bet.gold
       @user.save
-      #redirect_to(home_index_path, :notice => 'Nowy zaklad potwierdzony')
       redirect_to({:controller => :home, :action => :show_duel, :id => @duel},  :notice => 'Nowy zaklad potwierdzony')
     else
       render :action => "new"
@@ -66,22 +64,24 @@ class BetsController < ApplicationController
   end
   
 protected
-  
+  # sprawdzanie czy jesteśmy zalogowaniu jako użytkownik lub administrator
   def auth_admin_user
     if !(:authenticate_user! || :authenticate_admin!)
       redirect_to new_user_session_path
     end
   end
+  # sprawdzanie czy pojedynek się jeszcze nie rozpoczął
   def check_date
     @duel = Duel.find(params[:duel_id])
     if @duel.date < Time.now then
       redirect_to duel_bets_path(@duel)
     end
   end
+  # jeśli parametrem jest duel_id to wyszukujemy pojedynek
   def find_duel
     @duel = Duel.find(params[:duel_id]) if params[:duel_id]
   end
- 
+ # jeśli parametrem jest user_id to wyszukujemy użytkownika
   def find_user
      @user = User.find(params[:user_id]) if params[:user_id]
  end

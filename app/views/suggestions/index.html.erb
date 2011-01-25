@@ -19,7 +19,6 @@
     <td><%= suggestion.link %></td>
     <td><%= User.find_by_id(suggestion.user_id).username %></td>
     <td><%= link_to 'Pokaż', suggestion %></td>
-    <td><%= link_to 'Edytuj', edit_suggestion_path(suggestion) %></td>
     <td><%= link_to 'Usuń', suggestion, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>

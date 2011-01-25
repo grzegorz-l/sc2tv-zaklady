@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
   
   
  protected
- 
+  # sprawdzamy czy jesteśmy właścicielem komentarza lub administratorem
    def auth_admin_owner
      @comment = Comment.find(params[:comment_id])
     if !( @comment.user_id == current_user.id || :authenticate_admin!)

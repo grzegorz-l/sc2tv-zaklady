@@ -42,9 +42,9 @@
     		<%= f.submit "Dodaj komentarz" %>
   		</div>
 	<%end%>
-	<%=link_to 'Wróć', :action => :index%>
 	<%else%>
-	<%= link_to "Zaloguj się aby dodać komentarz.", new_user_session_path%>
-	<%end%>
+	    <%= link_to "Zaloguj się aby dodać komentarz.", new_user_session_path%><br>
+    <%end%>
+    <%= link_to 'Wróć', :action => :index%>
 	</div>
 </div>

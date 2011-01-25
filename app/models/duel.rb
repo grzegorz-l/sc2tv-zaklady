@@ -3,6 +3,8 @@ class Duel < ActiveRecord::Base
  
   
   protected
+
+  # za każdy dobrze postawiony zakład wypłacamy użytkownikowi pieniądze i usuwamy zakład
   def finish_bet
     @bets = self.bets
     if self.finished == true

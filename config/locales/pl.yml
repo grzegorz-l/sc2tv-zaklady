@@ -202,8 +202,8 @@ pl:
       timeout: 'Twoja sesja wygasła, zaloguj się ponownie.'
       inactive: 'Twoje konto nie jest jeszcze aktywne.'
     sessions:
-      signed_in: 'Zostałeś poprawnie zalogowany.'
-      signed_out: 'Zostałeś poprawnie wylogowany.'
+      signed_in: 'Zostałeś poprawnie zalogowany'
+      signed_out: 'Zostałeś poprawnie wylogowany'
     passwords:
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
       updated: 'Your password was changed successfully. You are now signed in.'
@@ -211,7 +211,7 @@ pl:
       send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
       confirmed: 'Your account was successfully confirmed. You are now signed in.'
     registrations:
-      signed_up: 'Zostałeś poprawnie zalogowany.'
+      signed_up: 'Zostałeś poprawnie zalogowany'
       updated: 'Twoje konto zostało zaktualizowane.'
       destroyed: 'Twoje konto zostało usunięte.'
     unlocks:

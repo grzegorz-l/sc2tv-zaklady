@@ -6,8 +6,12 @@
 	<%if @duel.finished%>Zakończony<%elsif @duel.date < @time%>Rozpoczęty<%else%>Nierozpoczęty<%end%></p>
 	<p>Ilość zakładów: <%=@duel.bets.count%></p>
 	<% if @duel.finished%><p>Zwycięzca: <%=@duel.winner%></p><%end%>
-	<%if @duel.date > Time.now%>
+	<%if (@duel.date > Time.now) && !@duel.finished%>
 		<%= link_to 'Postaw zakład', new_duel_bet_path(@duel)%><br>
 	<%end%>
-	<%= link_to 'Wróć', :action => :duels %>
+    <% if !@duel.finished %>
+	    <%= link_to 'Wróć', :action => :duels %>
+    <%else%>
+        <%= link_to 'Wróć', :action => :arch_duels %>
+    <%end%>
 </div>

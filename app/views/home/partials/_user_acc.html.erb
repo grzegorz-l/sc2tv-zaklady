@@ -9,7 +9,7 @@
 	<div class="modul_title">Logowanie</div>
 	<div class="modul_container">
 		<%= form_for("user", :url => user_session_path) do |f| %>
-  			<p><%= f.label :username %><br />
+  			<p><%= f.label :username, "Nazwa użytkownika" %><br />
   			<%= f.text_field :username, :size =>18 %></p>
 
   			<p><%= f.label :password, "Hasło" %><br />

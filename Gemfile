@@ -32,4 +32,8 @@ gem 'will_paginate', '~> 2.3.15'
  group :development, :test do
    gem 'sqlite3-ruby', :require => 'sqlite3'
    gem "rspec-rails", "~> 2.1.0"
+   gem 'cucumber-rails'
+   gem 'capybara'
+   gem 'database_cleaner'
+   gem 'launchy'
  end

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_admin!, :except => :show
+  before_filter :authenticate_admin!
   layout "admin_panel"
+
   
   def index
     @users = User.all
