@@ -35,3 +35,8 @@ a:hover { color: black; background-color: white; }
 	background-color: #0080ff;
 	margin-top: 15px;
 }
+
+#admin_logout{
+    color: black;
+    padding-left: 10px;
+}

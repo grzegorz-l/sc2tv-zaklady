@@ -13,6 +13,21 @@ class CommentsController < ApplicationController
     end
   end
   
+  def edit
+    @comment = Comment.find(params[:id])
+    @post = Post.find(params[:post_id])  
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    @post = Post.find(params[:post_id])
+    if @comment.update_attributes(params[:comment])
+      redirect_to({:controller => :home, :action => :show_news, :id => @post}, :notice => 'Komentarz został pomyślnie zaktualizowany.')
+    else
+      render :action => "edit"
+    end
+  end
+
   def destroy
     @post = Post.find(params[:id])
     @comment = Comment.find(params[:comment_id])

@@ -42,7 +42,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.update_attributes(params[:post])
-      redirect_to(@post, :notice => 'Post was successfully updated.')
+      redirect_to(@post, :notice => 'Post został pomyślnie zaktualizowany.')
     else
       render :action => "edit"
     end
@@ -51,6 +51,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
+    redirect_to(posts_path, :notice => "Post został usunięty")
   end
   
 end

@@ -31,6 +31,7 @@
     <%= f.label :link, "Link" %><br />
     <%= f.text_field :link %>
   </div>
+   <%= hidden_field(:suggestion, :user_id, :value => current_user.id) %>
   <div class="actions">
     <%= f.submit "Potwierdź" %>
   </div>

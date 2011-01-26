@@ -37,6 +37,7 @@ class SuggestionsController < ApplicationController
   def destroy
     @suggestion = Suggestion.find(params[:id])
     @suggestion.destroy
+    redirect_to(suggestions_path, :notice => 'Sugestia została usunięta')
   end
   
 end

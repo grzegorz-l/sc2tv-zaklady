@@ -19,7 +19,7 @@ class HomeController < ApplicationController
     @duels = Duel.where(:finished => false).order("date ASC").paginate(:page => params[:page], :per_page => 5)
   end
 
-  # archowum poedynków
+  # archiwum pojedynkow
   def arch_duels
     @duels = Duel.where(:finished => true).order("date ASC").reverse.paginate(:page => params[:page], :per_page => 5)
   end

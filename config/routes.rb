@@ -9,7 +9,6 @@ Sc2tvZaklady::Application.routes.draw do
     resources :comments
   end
   
-  
   resources :duels do
     member do
       get :result

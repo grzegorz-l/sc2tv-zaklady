@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ef35910-063e-406e-a785-9be11b0fe705" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/check_log_in.feature" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/manage_posts.feature" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/manage_suggestions.feature" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/step_definitions/app_steps.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/step_definitions/devise_steps.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/comments/edit.html.erb" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/admin_panel/duels.html.erb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/bets/.tmp__form.html.erb.15721~" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/bets/.tmp__form.html.erb.22430~" afterPath="" />
@@ -21,32 +17,23 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/duels/.tmp_index.html.erb.22543~" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/duels/.tmp_index.html.erb.8823~" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/duels/.tmp_show.html.erb.90001~" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/home/suggest_duel.html.erb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/.tmp_application.html.erb.8783~" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/users/.tmp_index.html.erb.50750~" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/users/.tmp_index.html.erb.71598~" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sc2tv-zaklady.iml" afterPath="$PROJECT_DIR$/.idea/sc2tv-zaklady.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin_panel_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin_panel_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/bets_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/bets_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/comments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/duels_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/duels_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/suggestions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/suggestions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/bet.rb" afterPath="$PROJECT_DIR$/app/models/bet.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/duel.rb" afterPath="$PROJECT_DIR$/app/models/duel.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/partials/_user_acc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/partials/_user_acc.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/show_duel.html.erb" afterPath="$PROJECT_DIR$/app/views/home/show_duel.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/show_news.html.erb" afterPath="$PROJECT_DIR$/app/views/home/show_news.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/user_acc.html.erb" afterPath="$PROJECT_DIR$/app/views/home/user_acc.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/suggestions/index.html.erb" afterPath="$PROJECT_DIR$/app/views/suggestions/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/pl.yml" afterPath="$PROJECT_DIR$/config/locales/pl.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/admin_panel.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/admin_panel.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/suggestions/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/suggestions/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/admin_panel.css" afterPath="$PROJECT_DIR$/public/stylesheets/admin_panel.css" />
     </list>
     <ignored path="sc2tv-zaklady.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,64 +57,91 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" showNonProject="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="manage_suggestions.feature" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/manage_suggestions.feature">
+      <file leaf-file-name="admin_panel.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/admin_panel.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="48" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+            <state line="12" column="17" selection-start="315" selection-end="315" vertical-scroll-proportion="-7.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="check_log_in.feature" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/features/check_log_in.feature">
+      <file leaf-file-name="admin_panel.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/admin_panel.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="25" selection-start="346" selection-end="346" vertical-scroll-proportion="0.28901735">
+            <state line="25" column="1" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_duel.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/show_duel.html.erb">
+      <file leaf-file-name="bets_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/bets_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="637" selection-end="637" vertical-scroll-proportion="-8.75">
+            <state line="4" column="69" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comments_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+      <file leaf-file-name="web_steps.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/step_definitions/web_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="2" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <file leaf-file-name="devise_steps.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/step_definitions/devise_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="devise.en.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/devise.en.yml">
+      <file leaf-file-name="app_steps.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/step_definitions/app_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="31" selection-start="1249" selection-end="1335" vertical-scroll-proportion="0.0">
+            <state line="4" column="22" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_posts.feature" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/manage_posts.feature">
+      <file leaf-file-name="bet.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/bet.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
+            <state line="3" column="27" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0867052">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/bets/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="103" selection-start="1268" selection-end="1268" vertical-scroll-proportion="-11.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="0" selection-start="1433" selection-end="1433" vertical-scroll-proportion="-18.458334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_user_acc.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/partials/_user_acc.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="70" selection-start="242" selection-end="282" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -167,22 +181,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/suggestions_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/suggestions/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/admin_panel_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/bets_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/duels_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/partials/_user_acc.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/user_acc.html.erb" />
-        <option value="$PROJECT_DIR$/features/manage_suggestions.feature" />
-        <option value="$PROJECT_DIR$/features/check_log_in.feature" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/show_news.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/suggestions/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/suggestions_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/suggestions/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/comments/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/admin_panel.html.erb" />
+        <option value="$PROJECT_DIR$/public/stylesheets/admin_panel.css" />
+        <option value="$PROJECT_DIR$/app/views/bets/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/bets_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/bet.rb" />
-        <option value="$PROJECT_DIR$/app/models/duel.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/show_duel.html.erb" />
       </list>
     </option>
   </component>
@@ -212,6 +226,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -293,21 +310,58 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sc2tv-zaklady" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sc2tv-zaklady" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sc2tv-zaklady" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sc2tv-zaklady" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.intellij.ui.tabs.FileColorsConfigurable" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="recentsLimit" value="5" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RunManager" selected="Rails.Development: sc2tv-zaklady">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -584,14 +638,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="13" y="24" width="1308" height="702" extended-state="0" />
+    <frame x="83" y="49" width="1308" height="702" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18188915" sideWeight="0.67132866" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17564403" sideWeight="0.67132866" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -636,114 +690,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/home/partials/_user_acc.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/suggestions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="56" selection-start="484" selection-end="484" vertical-scroll-proportion="-6.875">
+        <state line="39" column="71" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/step_definitions/web_steps.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/suggestions/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="24" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+        <state line="19" column="64" selection-start="457" selection-end="457" vertical-scroll-proportion="-11.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/step_definitions/devise_steps.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/bets/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
+        <state line="19" column="29" selection-start="587" selection-end="587" vertical-scroll-proportion="-11.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/devise.en.yml">
+    <entry file="file://$PROJECT_DIR$/app/views/suggestions/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="31" selection-start="1249" selection-end="1335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/manage_posts.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/suggestion.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/duel.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="88" selection-start="179" selection-end="179" vertical-scroll-proportion="0.1734104">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/bet.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="70" selection-start="528" selection-end="528" vertical-scroll-proportion="0.47134936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/manage_suggestions.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="48" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+        <state line="33" column="65" selection-start="965" selection-end="965" vertical-scroll-proportion="-12.833333">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+        <state line="30" column="5" selection-start="863" selection-end="863" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/show_duel.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/comments/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="637" selection-end="637" vertical-scroll-proportion="-8.75">
+        <state line="14" column="81" selection-start="439" selection-end="439" vertical-scroll-proportion="-8.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/partials/_user_acc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="2" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+        <state line="5" column="70" selection-start="242" selection-end="282" vertical-scroll-proportion="-3.125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/check_log_in.feature">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/admin_panel.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="25" selection-start="346" selection-end="346" vertical-scroll-proportion="0.28901735">
+        <state line="12" column="17" selection-start="315" selection-end="315" vertical-scroll-proportion="-7.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/admin_panel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="1" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/web_steps.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/devise_steps.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/app_steps.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="22" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="1433" selection-end="1433" vertical-scroll-proportion="-18.458334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/bets/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="103" selection-start="1268" selection-end="1268" vertical-scroll-proportion="-11.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/bets_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="69" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/bet.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="27" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0867052">
           <folding />
         </state>
       </provider>

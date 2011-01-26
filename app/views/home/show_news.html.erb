@@ -13,6 +13,7 @@
 				<span class="comment_body">
 					<%= comment.content %>
 					<%if ((@user && (@user.id == comment.user_id))) || admin_signed_in? %>
+                        <%= link_to 'Edytuj', :controller => :comments, :action => :edit, :post_id => @post, :id => comment  %>
 						<%= link_to 'Usuń', :controller => :comments, :action => :destroy, :id => @post, :comment_id => comment  %>
 					<%end%>
 				</span>

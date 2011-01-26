@@ -1,5 +1,5 @@
 class DuelsController < ApplicationController
-  before_filter :authenticate_admin!, :except => [:index, :show]
+  before_filter :authenticate_admin!
 
   layout "admin_panel"
   

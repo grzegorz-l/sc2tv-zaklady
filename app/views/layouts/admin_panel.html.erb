@@ -10,6 +10,7 @@
 <body>
 <div id="admin_top">
 	<p id="top_title">Panel administracyjny</p>
+    <p id="admin_logout" >Zalogowany jako: <%= current_admin.username %>, <%= link_to "Wyloguj",  destroy_admin_session_path(current_admin) %></p>
 </div>
 <div id="top_menu">
 	<%=link_to 'Newsy', posts_path %>

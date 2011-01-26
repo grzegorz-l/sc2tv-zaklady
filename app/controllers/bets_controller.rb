@@ -2,13 +2,12 @@ class BetsController < ApplicationController
 
   before_filter :find_duel, :find_user
   
-  before_filter :auth_admin_user, :except => :new
+  before_filter :auth_admin_owner, :except => [:new, :create, :index]
   
-  before_filter :authenticate_user!, :only => :new
-  
+  before_filter :authenticate_user!, :only => [:new, :create]
+
   before_filter :check_date, :except => [:index, :show]
 
-  before_filter :check_date, :only => [:new, :edit]
   
    def index
       if @user
@@ -18,7 +17,7 @@ class BetsController < ApplicationController
         render :action => "index", :layout => "admin_panel"
       end
    end
-  
+
   def new
     @user = current_user
     @bet = @duel.bets.build
@@ -55,18 +54,18 @@ class BetsController < ApplicationController
   def destroy
     @bet = Bet.find(params[:id])
     @bet.destroy 
-    if @duel
-      redirect_to duel_bets_path(@duel) 
+    if @user
+      redirect_to user_bets_path(@user)
     else
-      @user = current_user
-      redirect_to user_bets_path(@user) 
+      redirect_to duel_bets_path(@duel)
     end
   end
   
 protected
   # sprawdzanie czy jesteśmy zalogowaniu jako użytkownik lub administrator
-  def auth_admin_user
-    if !(:authenticate_user! || :authenticate_admin!)
+  def auth_admin_owner
+    @bet = Bet.find(params[:id])
+    if !(@bet.user_id == current_user.id || :authenticate_admin!)
       redirect_to new_user_session_path
     end
   end
@@ -74,7 +73,7 @@ protected
   def check_date
     @duel = Duel.find(params[:duel_id])
     if @duel.date < Time.now then
-      redirect_to duel_bets_path(@duel)
+      redirect_to :controller => :home, :action => :duels
     end
   end
   # jeśli parametrem jest duel_id to wyszukujemy pojedynek
